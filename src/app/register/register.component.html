@@ -1,0 +1,65 @@
+<main class="">
+    <section class="form my-5 mx-5">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-lg-5">
+                    <img src="https://i.picsum.photos/id/20/3670/2462.jpg?hmac=CmQ0ln-k5ZqkdtLvVO23LjVAEabZQx2wOaT4pyeG10I"
+                        class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-7 px-5 pt-3">
+                    <h1>Sign Up</h1>
+
+                    <form [formGroup]="myFormGroup">
+                        <!-- First_Name -->
+                        <div class="form-row">
+                            <div class="col-lg-9">
+                                <input type="text" placeholder="First_Name" class="form-control my-1 p-4"
+                                    id="First_Name" formControlName="First_Name" />
+                            </div>
+                        </div>
+
+
+                        <!-- Last_Name -->
+                        <div class="form-row">
+                            <div class="col-lg-9">
+                                <input type="text" placeholder="Last_Name" class="form-control my-1 p-4"
+                                    id="Last_Name" formControlName="Last_Name" />
+                            </div>
+                        </div>
+
+                        <!-- email -->
+                        <div class="form-row">
+                            <div class="col-lg-9">
+                                <input type="email" placeholder="E-mail" class="form-control my-1 p-4" 
+                                       id="Email" formControlName="Email" />
+                            </div>
+                        </div>
+                        <!-- Password -->
+                        <div class="form-row">
+                            <div class="col-lg-9">
+                                <input type="password" placeholder="Password" class="form-control my-1 p-4"
+                                    id="Password" formControlName="Password"/>
+                            </div>
+                        </div>
+                        <!-- ConfirmPassword -->
+                        <div class="form-row">
+                            <div class="col-lg-9">
+                                <input type="password" placeholder="Confirm_Password" class="form-control my-1 p-4"
+                                    id="Confirm_Password" formControlName="Confirm_Password" />
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-row">
+                            <div class="col-lg-9">
+                                <button type="button" class="btn1" (click)="registerUser()">Sign Up</button>
+                            </div>
+                        </div>
+
+                        <p>Already have an account? <a href="#link">Login here</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
