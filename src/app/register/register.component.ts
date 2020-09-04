@@ -11,14 +11,16 @@ import { HttpClient } from '@angular/common/http';
 export class RegisterComponent implements OnInit {
   myFormGroup = new FormGroup({
     "First_Name": new FormControl('', [
-      Validators.required,Validators.pattern("a-zA-Z")
+      Validators.required,Validators.pattern("[a-zA-Z ]*")
     ]),
 
     "Last_Name": new FormControl('', [
-      Validators.required,Validators.pattern("a-zA-Z")
+      Validators.required,Validators.pattern("[a-zA-Z]*")
     ]),
 
-    "Email": new FormControl(),
+    "Email": new FormControl('', [
+      Validators.required,Validators.pattern("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+[.]+[a-zA-z0-9-.]+$")
+    ]),
 
     "Password": new FormControl(),
 
@@ -38,5 +40,17 @@ export class RegisterComponent implements OnInit {
     await this.http.post(url, input).toPromise();
     this.myFormGroup.reset();
   }
+
+  get First_Name(){
+    return this.myFormGroup.get('First_Name');
+  };
+
+  get Last_Name(){
+    return this.myFormGroup.get('Last_Name');
+  };
+
+  get Email(){
+    return this.myFormGroup.get('Email');
+  };
 
 }

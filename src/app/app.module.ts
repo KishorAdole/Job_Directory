@@ -9,6 +9,7 @@ import { ConfirmationMailComponent } from './confirmation-mail/confirmation-mail
 
 import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http'
+import { ValidateEqualModule } from 'ng-validate-equal';
 //import { from } from 'rxjs';
 
 @NgModule({
@@ -24,7 +25,8 @@ import {HttpClientModule} from '@angular/common/http'
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ValidateEqualModule
   ],
   providers: [],
   bootstrap: [AppComponent]

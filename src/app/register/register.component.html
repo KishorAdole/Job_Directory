@@ -15,30 +15,38 @@
                             <div class="col-lg-9">
                                 <input type="text" placeholder="First_Name" class="form-control my-1 p-4"
                                     id="First_Name" formControlName="First_Name" />
+                                <span class="error" *ngIf="First_Name.invalid && First_Name.touched"
+                                    style="color: red; margin-left: 15px;">Invalid credentials.</span>
                             </div>
+
                         </div>
 
 
                         <!-- Last_Name -->
                         <div class="form-row">
                             <div class="col-lg-9">
-                                <input type="text" placeholder="Last_Name" class="form-control my-1 p-4"
-                                    id="Last_Name" formControlName="Last_Name" />
+                                <input type="text" placeholder="Last_Name" class="form-control my-1 p-4" id="Last_Name"
+                                    formControlName="Last_Name" />
+                                <span *ngIf="Last_Name.invalid && Last_Name.touched"
+                                    style="color: red;margin-left: 15px; ">Invalid credentials.</span>
                             </div>
                         </div>
 
                         <!-- email -->
                         <div class="form-row">
                             <div class="col-lg-9">
-                                <input type="email" placeholder="E-mail" class="form-control my-1 p-4" 
-                                       id="Email" formControlName="Email" />
+                                <input type="email" placeholder="E-mail" class="form-control my-1 p-4" id="Email"
+                                    formControlName="Email" />
+                                    <span *ngIf="Email.invalid && Email.touched"
+                                    style="color: red;margin-left: 15px; ">Invalid credentials.</span>
+
                             </div>
                         </div>
                         <!-- Password -->
                         <div class="form-row">
                             <div class="col-lg-9">
                                 <input type="password" placeholder="Password" class="form-control my-1 p-4"
-                                    id="Password" formControlName="Password"/>
+                                    id="Password" formControlName="Password" />
                             </div>
                         </div>
                         <!-- ConfirmPassword -->
